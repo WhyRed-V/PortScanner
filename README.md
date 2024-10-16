@@ -30,8 +30,8 @@ python Port_Scanner.py -s 20 -e 40000 -t 500 -V 192.168.1.2
 
 ## Arguements:
 IPv4	The target IP address to scan.
--s, --start	Starting port number for scanning.	
--e, --end	Ending port number for scanning.	
+-s, --start	Starting port number for scanning.
+-e, --end	Ending port number for scanning.
 -t, --threads	Number of threads to use for scanning.	
 -V, --verbose	Enable verbose output for real-time status.	
 -v, --version	Display the version information.
