@@ -24,8 +24,24 @@ The script is highly customizable, allowing you to specify the range of ports, t
 
 ```bash
 python Port_Scanner.py [options] IPv4
-
+```
+## Example Usage
 python Port_Scanner.py -s 20 -e 40000 -t 500 -V 192.168.1.2
 
+## Arguements:
+IPv4	The target IP address to scan.
+-s, --start	Starting port number for scanning.	
+-e, --end	Ending port number for scanning.	
+-t, --threads	Number of threads to use for scanning.	
+-V, --verbose	Enable verbose output for real-time status.	
+-v, --version	Display the version information.
+
+## How it works
+1. Prepare Arguments: The script uses argparse to parse command-line arguments, allowing you to specify the IP address, port range, and other options.
+2. Port Generation: A generator function is used to create the range of ports based on the user input.
+3. Scanning Ports: The script uses multiple threads to scan ports in parallel. For each port, it tries to establish a connection to the target IP. If the port is open, it is added to the list of open ports.
+4. Output: After all ports have been scanned, the list of open ports is printed along with the time taken for the scan.
+
+## Example Output
 Open Ports Found - [80, 443, 8080]
 Time taken - 15.42 seconds
